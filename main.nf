@@ -21,7 +21,7 @@ stage = params.stage
 if (params.stage == 4){
   csm2 = Channel.fromPath ( params.csm )
 } else {
-  csm2 = Channel.create()
+  csm2 = Channel.empty()
 }
 
 outdir = file( params.outdir )
@@ -107,11 +107,7 @@ if (t == "all"){
       .map{ it / 100.0 }
 }
 
-csm = Channel.empty()
-      .concat(csm1, csm2)
-      .first()
-
-
+csm = csm2.mix(csm1).first()
 
 process createCSN{
   publishDir csn, mode: "copy"
