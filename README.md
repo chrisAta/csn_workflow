@@ -6,7 +6,7 @@ This workflow uses a self-contained Nextflow pipeline that works in a Docker con
 
 ## Usage
 
-To create Coevolution Similarity Networks, you first need to produce coevolution matrices by CCMPred for a set of protein sequences ([instructions here](https://github.com/soedinglab/CCMpred/wiki/FAQ)). You can download an already produced zipped folder of such matrices [here](http://nextcloud.bioswarm.net/s/2nskyeNXCNiH6J5). Decompress it.
+To create Coevolution Similarity Networks, you first need to produce coevolution matrices by CCMPred for a set of protein sequences ([instructions here](https://github.com/soedinglab/CCMpred/wiki/FAQ)). You can download an already produced zipped folder of such matrices [here](https://data.ncl.ac.uk/articles/dataset/Trans241CoevMatrices_tar_gz/12555620). Decompress it.
 
 You also need a Multiple Sequence Alignment for your sequences in FASTA format. I use [ClustalOmega](https://www.ebi.ac.uk/Tools/msa/clustalo/) for this. The MSA for the test dataset mentioned above is in this repo in 'example/trans241_aln.fasta'.
 
